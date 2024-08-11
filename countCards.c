@@ -33,7 +33,7 @@ int main()
     char card_value = card_name[0];
     int val = 0;
 
-    if (value_in_array(card_value, &value_ten_cards, sizeof(value_ten_cards)))
+    if (value_in_array(card_value, value_ten_cards, sizeof(value_ten_cards)))
     {
       val = 10;
     }
