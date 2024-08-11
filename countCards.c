@@ -22,15 +22,17 @@ int atoi(const char *str);
 
 int main()
 {
-  char card_name[3];
-  puts("Enter the card_name: ");
-  scanf("%2s", card_name);
-  char card_value = card_name[0];
   char value_ten_cards[] = {'K', 'Q', 'J'};
-  int val = 0;
+  char card_name[3];
+  int count = 0;
 
-  while (card_value != 'X')
+  while (card_name[0] != 'X')
   {
+    puts("Enter the card_name: ");
+    scanf("%2s", card_name);
+    char card_value = card_name[0];
+    int val = 0;
+
     if (value_in_array(card_value, value_ten_cards, sizeof(value_ten_cards)))
     {
       val = 10;
@@ -46,11 +48,11 @@ int main()
     // Check if the value is between 3 to 6
     if (val >= 3 && val <= 6)
     {
-      puts("count has gone up");
+      count++;
     }
     else if (val == 10)
     {
-      puts("count has gone down");
+      count--;
     }
   }
 
