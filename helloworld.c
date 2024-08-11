@@ -7,7 +7,7 @@
 int main()
 {
   int decks;
-  puts("entr a number of decsk");
+  puts("entr a number of decks");
   scanf("%i", &decks);
   if (decks < 1)
   {
