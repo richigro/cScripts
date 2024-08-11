@@ -17,6 +17,9 @@ int value_in_array(char val, char *arr, size_t size)
   return 0;
 }
 
+// Declaration of atoi neede to remove compiler warning
+int atoi(const char *str);
+
 int main()
 {
   char card_name[3];
