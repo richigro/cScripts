@@ -3,16 +3,16 @@
 void go_south_east(int *lat, int *lon)
 {
   // decrease lat by 1
-  lat -= 1;
+  *lat -= 1;
   // increase lon by 1
-  lon += 1;
+  *lon += 1;
   // return new lat and lon
 }
 
 int main()
 {
-  int curr_lat = 0;
-  int curr_lon = 0;
+  int curr_lat = 32;
+  int curr_lon = -64;
 
   go_south_east(&curr_lat, &curr_lon);
 
