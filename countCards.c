@@ -45,6 +45,12 @@ int main()
     {
       val = atoi(card_name);
     }
+    if (val < 1 || val > 10)
+    {
+      puts("I don't understand that value!");
+      continue;
+    }
+
     // Check if the value is between 3 to 6
     if (val >= 3 && val <= 6)
     {
@@ -54,6 +60,7 @@ int main()
     {
       count--;
     }
+    printf("Current count: %i\n", count);
   }
 
   return 0;
