@@ -1,3 +1,15 @@
+/*
+  This tools lets you transform, gps test data in the following format:
+  92.173,-71.097,Speed = 21
+  ...
+
+  and transforms it to a json object
+  Usage:
+  Run executable or binary like below.
+  Make sure gpsData.csv contains the data in the format mentioned above.
+  $ ./main < gpsData.csv > output.json
+*/
+
 #include <stdio.h>
 
 int main(void)
