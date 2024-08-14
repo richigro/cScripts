@@ -7,8 +7,8 @@ int main(void)
   char info[80];
   int started = 0;
 
-  puts("data =[\n");
-  while (scanf("%f %f %79[^\n]", &latitude, &longitude, info) == 3)
+  puts("data =[");
+  while (scanf("%f,%f,%79[^\n]", &latitude, &longitude, info) == 3)
   {
     if (started)
     {
