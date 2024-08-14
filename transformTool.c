@@ -31,10 +31,14 @@ int main(void)
       started = 1;
     }
     // validate that the longitude and lattitude are within their normal ranges
-    if (latitude > 90 || latitude < -90 || longitude > 180 || longitude < -180)
+    if ((latitude < -90.0) || (latitude > 90.0))
     {
-      puts("There was a validation error: please check you latitudes and longituedes for values outside of the normal ranges.\n");
-
+      printf("Invalid latitude: %f\n", latitude);
+      return 2;
+    }
+    if ((longitude < -180.0) || (longitude > 180.0))
+    {
+      printf("Invalid longitude: %f\n", longitude);
       return 2;
     }
 
