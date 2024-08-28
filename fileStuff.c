@@ -18,8 +18,12 @@ int main()
     return 1;
   }
 
-  fgets(buffer, sizeof(buffer), in_file);
+  fscanf(in_file, "%79[^\n]\n", buffer);
+
   printf("the line of text is: %s", buffer);
+
+  // close the file buffer
+  fclose(in_file);
 
   return 0;
 }
