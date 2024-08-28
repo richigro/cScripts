@@ -3,7 +3,7 @@
   and write data into one of 3 files
 
   Example usage:
-  $ ./main mermaid marmaid.csv elvis elvises.csv the_rest.csv
+  $ ./main mermaid mermaid.csv elvis elvises.csv the_rest.csv
 
 */
 #include <stdio.h>
@@ -13,6 +13,14 @@
 int main(int argc, char *argv[])
 {
   char line[80];
+
+  if (argc != 6)
+  {
+    fprintf(stderr, "You need to give 5 arguments\n");
+    puts("Example: ./main mermaid mermaid.csv elvis elvises.csv the_rest.csv\n");
+    return 1;
+  }
+
   FILE *in = fopen("spooky.csv", "r");
   FILE *file1 = fopen(argv[2], "w");
   FILE *file2 = fopen(argv[4], "w");
