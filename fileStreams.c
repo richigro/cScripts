@@ -3,6 +3,8 @@
   and write data into one of 3 files
 */
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main()
 {
