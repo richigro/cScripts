@@ -18,7 +18,7 @@ int main()
     return 1;
   }
 
-  // fgets(buffer, sizeof(buffer), in_file);
+  fgets(buffer, sizeof(buffer), in_file);
   printf("the line of text is: %s", buffer);
 
   return 0;
