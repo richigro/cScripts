@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
   int count = 0;
   char ch;
 
-  while ((ch = getopt(argc, argv, "d:t")) != EOF)
+  while ((ch = getopt(argc, argv, "d:t")) != -1)
   {
 
     switch (ch)
