@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <io.h>
+#include <unistd.h>
 
 int main(int argc, char *argv[])
 {
@@ -24,10 +24,10 @@ int main(int argc, char *argv[])
 
       return 1;
     }
-
-    argc -= optind;
-    argv += optind;
   }
+
+  argc -= optind;
+  argv += optind;
 
   if (thick)
     puts("Thick crust.");
