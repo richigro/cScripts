@@ -9,6 +9,8 @@ int main(int argc, char *argv[])
   char ch;
 
   while ((ch = getopt(argc, argv, "d:t")) != EOF)
+  {
+
     switch (ch)
     {
     case 'd':
@@ -22,8 +24,10 @@ int main(int argc, char *argv[])
 
       return 1;
     }
-  argc -= optind;
-  argv += optind;
+
+    argc -= optind;
+    argv += optind;
+  }
 
   if (thick)
     puts("Thick crust.");
