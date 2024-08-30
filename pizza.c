@@ -8,9 +8,8 @@ int main(int argc, char *argv[])
   int count = 0;
   char ch;
 
-  while ((ch = getopt(argc, argv, "d:t")) != -1)
+  while ((ch = getopt(argc, argv, "d:t")) != EOF)
   {
-
     switch (ch)
     {
     case 'd':
@@ -21,7 +20,6 @@ int main(int argc, char *argv[])
       break;
     default:
       fprintf(stderr, "Unknown option: '%s'\n", optarg);
-
       return 1;
     }
   }
@@ -31,14 +29,11 @@ int main(int argc, char *argv[])
 
   if (thick)
     puts("Thick crust.");
-
   if (delivery[0])
     printf("To be delivered %s.\n", delivery);
 
   puts("Ingredients:");
-
   for (count = 0; count < argc; count++)
     puts(argv[count]);
-
   return 0;
 }
