@@ -5,15 +5,42 @@
  */
 #include <stdio.h>
 
+// Detect OS
+#if defined(_WIN32)
+#define OS "Operating system: Windows\n"
+#elif defined(__linux__)
+#define OS "Operating system: Linux\n"
+#elif defined(__APPLE__)
+#define OS "Operating system: macOS\n"
+#else
+#define OS "Operating system: Unknown\n"
+#endif
+
+// Detect Architecture
+#if defined(__x86_64__) || defined(_M_X64)
+#define ARCH "Architecture: 64-bit (x86_64)\n"
+#elif defined(__i386__) || defined(_M_IX86)
+#define ARCH "Architecture: 32-bit (x86)\n"
+#elif defined(__arm__) || defined(__aarch64__)
+#define ARCH "Architecture: ARM\n"
+#else
+#define ARCH "Architecture: Unknown\n"
+#endif
+
 int main()
 {
+  char *os = (OS == NULL) ? "" : OS;
+  char *arch = (ARCH == NULL) ? "" : ARCH;
 
-  printf("the size of an int is: %lu bytes or %lu bits\n", sizeof(int), sizeof(int) * 8);
+  printf("%s\n", os);
+  printf("%s\n", arch);
+
+  printf("the size of an char is: %lu byte(s) or %lu bits\n", sizeof(char), sizeof(char) * 8);
   printf("the size of an short is: %lu bytes or %lu bits\n", sizeof(short), sizeof(short) * 8);
+  printf("the size of an float is: %lu bytes or %lu bits\n", sizeof(float), sizeof(float) * 8);
+  printf("the size of an int is: %lu bytes or %lu bits\n", sizeof(int), sizeof(int) * 8);
   printf("the size of an double is: %lu bytes or %lu bits\n", sizeof(double), sizeof(double) * 8);
   printf("the size of an long is: %lu bytes or %lu bits\n", sizeof(long), sizeof(long) * 8);
-  printf("the size of an float is: %lu bytes or %lu bits\n", sizeof(float), sizeof(float) * 8);
-  printf("the size of an char is: %lu bytes or %lu bits\n", sizeof(char), sizeof(char) * 8);
 
   return 0;
 }
