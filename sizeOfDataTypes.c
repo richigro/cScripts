@@ -39,7 +39,7 @@ int main()
   printf("the size of an char is: %lu byte(s) or %lu bits\n", sizeof(char), sizeof(char) * 8);
   printf("the size of an short is: %lu bytes or %lu bits\n", sizeof(short), sizeof(short) * 8);
   printf("the size of an float is: %lu bytes or %lu bits\n", sizeof(float), sizeof(float) * 8);
-  printf("FLT_MAX is: %\n", FLT_MAX);
+  printf("FLT_MAX is: %f\n", FLT_MAX);
   printf("FLT_MIN is: %.50f\n", FLT_MIN);
   printf("the size of an int is: %lu bytes or %lu bits\n", sizeof(int), sizeof(int) * 8);
   printf("INT_MAX is: %i\n", INT_MAX);
