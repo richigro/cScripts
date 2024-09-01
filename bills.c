@@ -6,7 +6,7 @@ short tax_percent = 6;
 
 float add_with_tax(float f)
 {
-  float tax_rate = 1 + tax_percent / 100;
+  float tax_rate = 1 + tax_percent / (float)100;
   total = total + (f * tax_rate);
   count = count + 1;
   return total;
