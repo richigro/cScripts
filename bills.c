@@ -5,7 +5,7 @@ short count = 0;
 short tax_percent = 6;
 
 // function declaration, so the compiler doesn't have to worry about where the function is defined.
-float add_with_tax();
+float add_with_tax(float);
 
 int main()
 {
