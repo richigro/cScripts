@@ -9,3 +9,9 @@ encrypt.o: encrypt.c encrypt.h
 message_hidder: message_hidder.o encrypt.o
 	echo "Linking files and outputing message_hidder executable"
 	gcc message_hidder.o encrypt.o -o message_hidder
+
+all: message_hidder
+
+clean:
+	echo "Removing everything except the source files"
+	rm encrypt.o message_hidder.o message_hidder
