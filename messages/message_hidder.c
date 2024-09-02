@@ -7,6 +7,6 @@ int main()
   while (fgets(msg, 80, stdin))
   {
     encrypt(msg);
-    printf("Here is the ecrypted message: %s\n", msg);
+    printf("Here is your secret message: %s\n", msg);
   }
 }
