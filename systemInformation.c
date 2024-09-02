@@ -1,7 +1,6 @@
 /*
- *This is used to tell me what are the sizes of each data type
- * this is specific to where the program is ran.
- * Depends on the architecture of the machine
+ *This is used to tell me important things about the system my code is running on.
+ * For example: The Os, the archtecture, sizes, and limts of data types.
  */
 
 #include <stdio.h>
@@ -30,8 +29,10 @@ int main()
   puts("Architecture: 64-bit (x86_64)\n");
 #elif defined(__i386__) || defined(_M_IX86)
   puts("Architecture: 32-bit (x86)\n");
-#elif defined(__arm__) || defined(__aarch64__)
-  puts("Architecture: ARM\n");
+#elif defined(__arm__)
+  puts("Architecture: 32-bit ARM\n");
+#elif defined(__aarch64__)
+  puts("Architecture: 64-bit ARM\n");
 #else
   puts("Architecture: Unknown\n");
 #endif
