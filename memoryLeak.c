@@ -43,7 +43,7 @@ void release(node *node)
     if (node->yes)
       release(node->yes);
     if (node->question)
-      release(node->question);
+      free(node->question);
     free(node);
   }
 }
