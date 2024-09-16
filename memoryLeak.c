@@ -94,6 +94,7 @@ int main()
         /* Then replace this question with the new question */
         printf("Give me a question that is TRUE for %s but not for %s? ", suspect, current->question);
         fgets(question, 80, stdin);
+        free(current->question);
         current->question = strdup(question);
 
         break;
@@ -106,3 +107,13 @@ int main()
 
   return 0;
 }
+
+/*
+  Answer: what is causing the data leak here?
+
+  the strdup function is causing the leak. we have to make suere that if current->question is already
+  pointing to something on th eheap to free it before allocating the new question.
+
+  add
+  free(current->question) right before changing the question
+*/
