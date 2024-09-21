@@ -1,4 +1,6 @@
 /*
+  topic: function pointers
+
   creating an array of function pointers.
   When creating an enum, c will give each of the symbols a number starting at 0.
   So DUMP = 0, Second_Chance = 1, and Marriage =2 and so on.
