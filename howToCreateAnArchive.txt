@@ -1,0 +1,17 @@
+
+r flag mean update the archive if it already exists
+c flag means the archive will be created without any feedback
+s flag tells ar to create an index at the start of the .a file
+
+the .o files (object files) that will be stored in the archive
+
+libhfsecurity.a is the name of the archive we want to create this name needs to be unique or 
+we run the risk of overriding the previous archive if it exists
+
+These are called static libraries
+
+ar -rcs libhfsecurity.a encrypt.o checksum.o
+
+
+Here is how to compile the file:
+  gcc .\testingMyArchives.c -I .\messages\ -L .\messages\ -lhfsecurity -o .\testingMyArchives.exe
