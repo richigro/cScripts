@@ -1,0 +1,22 @@
+if you have to code that you want to share:
+
+codeToBeShared.c
+- create a folder named inclues and add a new header file
+codeToBeShared.h it should have the function definitions you want to share
+- in the codeToBeShared.c source file include the header like source
+#include <codeToBeShared.h>
+
+- create an object file for the source code you want to share
+gcc -Iinclues -c codeToBeShared.c codeToBeShared.o
+
+- Now inside of the main file where this code to be shared is going to be used
+#include <codeToBeShared.h>
+- create an object file
+gcc -Iincludes -c main.c -o main.o
+
+- Now create an archive using the object file for the code you want to share
+- libs is the destination the archive file should always begin with the prefex lib
+ar -rcs ./libs/libcodetoshare.a codeToBeShared.o
+
+- Finally you should be able to compile your main executable 
+gcc main.o -llibs -lcodetoshare -o main.exe
